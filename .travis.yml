@@ -39,28 +39,30 @@ matrix:
     env:
       - AMALGAMATED=ON
 
-  - name: "macOS Xcode 10"
+  - name: "macOS Xcode 11.3"
     os: osx
-    osx_image: xcode10
+    osx_image: xcode11.3
     env:
+      - CMAKE_FLAGS="-GXcode"
       - AMALGAMATED=OFF
 
-  - name: "macOS Xcode 10 Amalgamated"
+  - name: "macOS Xcode 11.3 Amalgamated"
     os: osx
-    osx_image: xcode10
+    osx_image: xcode11.3
     env:
+      - CMAKE_FLAGS="-GXcode"
       - AMALGAMATED=ON
 
-  - name: "iOS Xcode 10"
+  - name: "iOS Xcode 11.3"
     os: osx
-    osx_image: xcode10
+    osx_image: xcode11.3
     env:
      - CMAKE_FLAGS="-GXcode -DCMAKE_SYSTEM_NAME=iOS -DBGFX_BUILD_TOOLS=OFF -DCMAKE_OSX_SYSROOT=iphonesimulator"
      - AMALGAMATED=OFF
 
-  - name: "iOS Xcode 10 Amalgamated"
+  - name: "iOS Xcode 11.3 Amalgamated"
     os: osx
-    osx_image: xcode10
+    osx_image: xcode11.3
     env:
      - CMAKE_FLAGS="-GXcode -DCMAKE_SYSTEM_NAME=iOS -DBGFX_BUILD_TOOLS=OFF -DCMAKE_OSX_SYSROOT=iphonesimulator"
      - AMALGAMATED=ON
